@@ -1,0 +1,4 @@
+Swim: 
+	3x25m the Backstroke, 
+	3x25m the Breasttroke,
+	3x25m the Butterfly stroke

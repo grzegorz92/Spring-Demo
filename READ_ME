@@ -1,0 +1,52 @@
+[INFO]  This is the Java application that using Spring framework. It allows you to get the special workout 
+	that you need depending on the sport type you will choose.
+        To get the workout for chosen sport, copy proper Bean and paste to the "applicationContext.xml".
+
+
+
+FootballWorkout:
+
+<context:property-placeholder location="classpath:sport.properties"/>
+	
+	<bean id="myWorkout"
+	class="com.myworkout.app.FootballWorkout">
+		
+	<constructor-arg  index="0" value="${foo.workout}"/>
+
+	</bean>
+	
+	
+	
+TennisWorkout:
+
+<bean id="myWorkout"
+	class="com.myworkout.app.TennisWorkout">
+	</bean>
+	
+	
+	
+TrackWorkout:
+
+	<bean id="randomWrk"
+		class="com.myworkout.app.RandomTrackWorkout">
+	</bean>
+	
+	
+	<bean id="myWorkout"
+	class="com.myworkout.app.TrackWorkout">
+	<property name="randomWokrout" ref="randomWrk"/>
+	
+	
+	</bean>
+	
+	
+SwimmingWorkout:
+
+	<bean id="myWorkout"
+	class="com.myworkout.app.SwimmingWorkout">
+	</bean>
+	
+	
+			
+	
+
